@@ -65,16 +65,16 @@ function selectAnswer(selectedIndex) {
     if (!currentQuestion.answered) {
         if (selectedIndex === currentQuestion.correctAnswer) {
             score++;
-            document.getElementById('modal-text').textContent = "Correct! " + currentQuestion.explanation;
+            document.getElementById('modal-text').textContent = "Correct! " //+ currentQuestion.explanation;
             document.body.style.backgroundColor = "green";
         } else {
-            document.getElementById('modal-text').textContent = "Incorrect. " + currentQuestion.explanation;
+            document.getElementById('modal-text').textContent = "Incorrect. " //+ currentQuestion.explanation;
             document.body.style.backgroundColor = "red";
         }
         // Mark the question as answered
         currentQuestion.answered = true;
     } else {
-        document.getElementById('modal-text').textContent = currentQuestion.explanation + " You already answered this question.";
+        document.getElementById('modal-text').textContent = " You already answered this question.";
     }
 
     const modal = document.getElementById("explanation-modal");
